@@ -127,7 +127,7 @@ app.get("/queries", authenticateRequest, async (req, res) => {
         company_desc: "DashcamSG, a company that sells car accessories",
         company_name: "DashcamSG",
         product_list: ["A500s"],
-        tools: ["Schedule", "PriceList", "VectorDatabase"],
+        tools: ["Schedule", "PriceList", "VectorDatabase", "Troubleshooting"],
         usable_tools: ["VectorDatabase"],
       },
     };
@@ -146,6 +146,8 @@ app.get("/queries", authenticateRequest, async (req, res) => {
       ? "[ITEM]"
       : agent.includes("schedule")
       ? "[SCHEDULE]"
+      : agent.includes("troubleshooting")
+      ? "[TROUBLESHOOTING]"
       : "[PRICE]";
 
     // Temporary Category Variable based on AI model (Legacy)
@@ -154,6 +156,8 @@ app.get("/queries", authenticateRequest, async (req, res) => {
       ? "Product"
       : agent.includes("schedule")
       ? "Scheduling"
+      : agent.includes("troubleshooting")
+      ? "Troubleshooting"
       : "Price List";
 
     // Determine success
