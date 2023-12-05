@@ -16,7 +16,7 @@ Here we connect a Telegram channel to our API which allows a customer to interac
 
 ## Webpage
 -----
-Link to Webpage: https://friday-webpage.herokuapp.com/ 
+Link to Webpage: https://friday-webpage.herokuapp.com/ (This website has been discontinued to save costs after the hackathon.)
 
 
 
